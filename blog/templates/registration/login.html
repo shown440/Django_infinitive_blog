@@ -1,0 +1,27 @@
+{% extends "blog/base.html" %}
+
+<!-- here content block will behave like body_block -->
+{% block content %}
+
+    <div class="jumbotron">
+        <h2>Please Login:</h2>
+        <h3>(Must be SuperUser, please check with the site admin)</h3>
+
+        {% if form.errors %}
+            <p>Your username and password didn't match. Please try again.</p>
+        {% endif %}
+
+        <!-- blog:login || login anyone can use for this form. -->
+        <form method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+
+                {{form.as_p}}
+                <input type="submit" class="btn btn-primary" value="Login" />
+                <!-- This hiddeninput field go to the login URL in project/urls.py 
+                and then it will follow the instruction of what have to do in next? -->
+                <input type="hidden" name="next" value="{{ next }}" />
+        </form>
+
+    </div>   
+
+{% endblock content %}

@@ -1,0 +1,9 @@
+0. https://medium.com/
+1. https://github.com/yabwe/medium-editor
+2. https://github.com/yabwe/medium-editor/blob/master/demo/textarea.html
+
+3. https://codepen.io/picks/2
+
+4. https://fonts.google.com/
+	a. Montserrat
+	b. Russo One
